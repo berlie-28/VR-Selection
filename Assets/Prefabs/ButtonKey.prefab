@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3660696714280537196}
   - component: {fileID: 1627321877789111253}
   - component: {fileID: 6424206746880990093}
+  - component: {fileID: 2943031982146049564}
   m_Layer: 0
   m_Name: ButtonKey
   m_TagString: Untagged
@@ -130,6 +131,7 @@ MonoBehaviour:
   digit: 1
   restColor: {r: 0.85, g: 0.85, b: 0.85, a: 1}
   pressColor: {r: 0.25, g: 0.25, b: 0.25, a: 1}
+  hoverScale: 1.15
 --- !u!114 &6424206746880990093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,6 +180,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2943031982146049564}
+        m_TargetAssemblyTypeName: DwellSelector, Assembly-CSharp
+        m_MethodName: HoverStart
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.HoverEnterEventArgs, Unity.XR.Interaction.Toolkit
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument:
+          m_BoolArgument: 0
+        m_CallState: 2
   m_HoverExited:
     m_PersistentCalls:
       m_Calls:
@@ -190,7 +204,19 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument:
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2943031982146049564}
+        m_TargetAssemblyTypeName: DwellSelector, Assembly-CSharp
+        m_MethodName: HoverEnd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument:
           m_BoolArgument: 0
         m_CallState: 2
   m_FirstSelectEntered:
@@ -240,6 +266,20 @@ MonoBehaviour:
   m_StartingInteractionStrengthFilters: []
   m_AutoFindParentInteractableInHierarchy: 0
   m_ParentInteractableObject: {fileID: 0}
+--- !u!114 &2943031982146049564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4329362951889652742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c9ccc9a13b444944ab2294911979fe2, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::DwellSelector
+  dwellTime: 1.2
+  graceTime: 0.2
 --- !u!1 &7314324373877948787
 GameObject:
   m_ObjectHideFlags: 0

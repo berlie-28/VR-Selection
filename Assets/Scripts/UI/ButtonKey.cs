@@ -33,6 +33,13 @@ public class ButtonKey : MonoBehaviour
         transform.localScale = normalScale;
     }
 
+    // 0 = rest color, 1 = fully pressed color, used by DwellSelector while waiting
+    public void SetDwellProgress(float t)
+    {
+        if (flashRoutine == null)
+            buttonRenderer.material.color = Color.Lerp(restColor, pressColor, t);
+    }
+
     // called by whichever selection technique is active (ray, dwell and so on)
     public void Press()
     {
