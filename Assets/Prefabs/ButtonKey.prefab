@@ -128,7 +128,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonKey
   digit: 1
-  pressColor: {r: 0, g: 1, b: 0, a: 1}
+  restColor: {r: 0.85, g: 0.85, b: 0.85, a: 1}
+  pressColor: {r: 0.25, g: 0.25, b: 0.25, a: 1}
 --- !u!114 &6424206746880990093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,10 +165,34 @@ MonoBehaviour:
       m_Calls: []
   m_HoverEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1627321877789111253}
+        m_TargetAssemblyTypeName: ButtonKey, Assembly-CSharp
+        m_MethodName: HoverStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_HoverExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1627321877789111253}
+        m_TargetAssemblyTypeName: ButtonKey, Assembly-CSharp
+        m_MethodName: HoverEnd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstSelectEntered:
     m_PersistentCalls:
       m_Calls: []
