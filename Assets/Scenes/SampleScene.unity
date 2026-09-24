@@ -129,6 +129,8 @@ GameObject:
   m_Component:
   - component: {fileID: 62682750}
   - component: {fileID: 62682749}
+  - component: {fileID: 62682752}
+  - component: {fileID: 62682751}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -166,6 +168,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &62682751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62682748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6536f2751447f4d91911bd0a7274d542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TremorSimulator
+  tremorEnabled: 1
+  target: {fileID: 512008653}
+  rotationAmount: 3
+--- !u!114 &62682752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62682748}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6536f2751447f4d91911bd0a7274d542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TremorSimulator
+  tremorEnabled: 0
+  target: {fileID: 512008652}
+  rotationAmount: 3
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,8 +568,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3183670378695798404, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_TransformToFollow
-      value: 
+      value:
       objectReference: {fileID: 997630603}
+    - target: {fileID: 6693052528577237899, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_UpdateType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -554,6 +590,11 @@ Transform:
 --- !u!4 &512008652 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1670256625, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 512008650}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &512008653 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 202364688, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
   m_PrefabInstance: {fileID: 512008650}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &644091141
